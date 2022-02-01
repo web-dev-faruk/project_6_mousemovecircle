@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+         display: flex;   
+        }
+        #x_result{
+            background-color: aqua;
+        }
+        #y_result{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h7 id="x_result"></h7>
+        <h7 id="y_result"></h7>
+    </div>
+    
+
+
+    <script>
+        function areaFunction(e){
+        let x = e.clientX;
+        let y = e.clientY;
+        console.log(x);
+        console.log(y);
+        document.getElementById(`x_result`).style.backgroundColor="green";
+        document.getElementById(`x_result`).style.width= x+"px";
+        document.getElementById(`x_result`).style.height= y+"px";
+        document.getElementById(`x_result`).style.borderRadius="100%";
+        }
+        document.onmousemove= areaFunction;
+    </script>
+</body>
+</html>
